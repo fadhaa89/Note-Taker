@@ -15,6 +15,6 @@ app.use('/api',apiRoutes);
 app.use("/",htmlRoutes);
 
 app.listen(PORT, () => {
-    allNotes = gatherNotes();
+    // allNotes = gatherNotes();
     console.log(`API server now on port ${PORT}!`);
 });
