@@ -1,3 +1,4 @@
+  
 const router = require("express").Router();
 const {
     notes
@@ -7,7 +8,7 @@ const {
     deleteNote
 } = require('../../lib/noteFunctions');
 
-//getting notes
+
 router.get('/notes', (req, res) => {
     let saved = notes;
     res.json(saved);
@@ -19,7 +20,6 @@ router.post('/notes', (req, res) => {
     res.json(note);
 })
 
-//for deleting notes
 router.delete('/notes/:id', (req, res) => {
     deleteNote(notes, req.params.id);
     res.json(notes);
