@@ -1,20 +1,40 @@
-const express = require('express');
-const apiRoutes = require ("./routes/apiRoutes");
-const htmlRoutes = require ("./routes/htmlRoutes");
+const router = require('express').Router();
+const helper = require("../db/helper");
 
-const PORT = process.env.PORT || 3000;
-const app = express();
+// Gets all the notes
+router.get("/notes", function (req, res) {
+    //1.load db.json
+    //2.send db.json
+    helper.gatherNotes()
+        .then((notes) => {
+            return res.json(notes);
+        })
+        .catch((err) => res.status(500).json(err))
 
-app.use (express.json ());
-app.use(express.urlencoded({
-    extended : true
-}));
-app.use(express.static('public')); //apends public //
-
-app.use('/api',apiRoutes);
-app.use("/",htmlRoutes);
-
-app.listen(PORT, () => {
-    // allNotes = gatherNotes();
-    console.log(`API server now on port ${PORT}!`);
 });
+
+// POST `/api/notes` - Should recieve a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
+router.post("/notes", function (req, res) {
+    //1.load db.json    
+    //2.add id to the new note
+    //3.push new note into the db we got before (object)
+    //4.save this array as the db 
+    helper.updateNotes(req.body)
+        .then((notes) => {
+            return res.json(notes);
+        })
+        .catch((err) => res.status(500).json(err))
+
+});
+
+// Delete a note 
+router.delete("/notes/:id", function (req, res) {
+    //1.load db
+    //2.loop over all entries for the id macting querey
+    //3.if we have matched then removed from the array 
+    //4.save the db
+    let noteId = req.params.id;
+    res.json(deleteNote(noteId));
+});
+
+module.exports = router;
