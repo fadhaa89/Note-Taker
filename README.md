@@ -14,8 +14,11 @@ name : Fadhaa Abdullah </br>
 Email: fadhaaabdullah8991@gmail.com </br>
 Github page: Fadhaa89
 
+## My Links :
 ## Repo Link :
 https://github.com/fadhaa89/Note-Taker
+ ## Deployed :
+ https://fadhaa89.github.io/Note-Taker/
 
 ## Visuals :
 C:\Users\fadha\Desktop\homework\Note-Taker\example.gif
