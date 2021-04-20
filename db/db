@@ -1,0 +1,24 @@
+{
+  "notes": [
+    {
+      "title": "Enter Your Note!",
+      "text": " You can add notes here.",
+      "id": "0"
+    },
+    {
+      "title": "Delet Your Notes",
+      "text": "You can delete notes.",
+      "id": "1"
+    },
+    {
+      "title": "say hello",
+      "text": "Hello World from my note taker !\n",
+      "id": "2"
+    },
+    {
+      "title": "Again !!",
+      "text": "hello hello :)",
+      "id": "3"
+    }
+  ]
+}
