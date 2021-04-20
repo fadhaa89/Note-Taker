@@ -16,3 +16,6 @@ Github page: Fadhaa89
 
 ## Repo Link :
 https://github.com/fadhaa89/Note-Taker
+
+## Visuals :
+C:\Users\fadha\Desktop\homework\Note-Taker\example.gif
