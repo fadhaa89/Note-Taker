@@ -21,4 +21,4 @@ https://github.com/fadhaa89/Note-Taker
  https://fadhaa89.github.io/Note-Taker/
 
 ## Visuals :
-C:\Users\fadha\Desktop\homework\Note-Taker\example.gif
+![Example Gif](./public/assets/example.gif)
