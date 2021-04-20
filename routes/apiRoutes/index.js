@@ -1,3 +1,4 @@
+//DEPENDENCIES
 const router = require('express').Router();
 const notesRoutes = require('./noteRoutes')
 
