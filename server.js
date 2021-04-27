@@ -1,6 +1,6 @@
 
 //Configure Server: Set Port
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 // const router = require('express').Router();
 const express = require("express");
 const app = express(); 
